@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pitcar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center space-x-4">
+          <img src="/assets/logo.png" alt="Pitcar Logo" class="h-8" />
+        </div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Data Master</a>
+          </li>
+          <li><a href="#" class="text-gray-700 hover:text-red-500">Stok</a></li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Kasir</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Order</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Akuntansi</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Laporan</a>
+          </li>
+        </ul>
+        <div>
+          <button class="text-gray-700 hover:text-red-500">
+            Administrator
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto flex-grow mt-6 space-y-4">
+      <!-- Button Actions -->
+      <div class="flex space-x-4">
+        <button
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+        >
+          + Tambah Barang
+        </button>
+        <button
+          class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+        >
+          Import Menu Excel
+        </button>
+      </div>
+
+      <!-- Notification -->
+      <div
+        class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded-lg"
+      >
+        <p>
+          Ada 5 Menu yang dibawah Stok minim
+          <a href="#" class="text-blue-500 underline">Cek Disini</a>
+        </p>
+      </div>
+
+      <!-- Tabel Daftar Menu -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-red-500 font-bold mb-4">Daftar Menu</h2>
+        <div class="mb-4 flex justify-between items-center">
+          <label>
+            Show
+            <select class="border rounded-lg px-2 py-1">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+            entries
+          </label>
+          <input
+            type="text"
+            class="border rounded-lg px-4 py-2"
+            placeholder="Search"
+          />
+        </div>
+        <table class="w-full border">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border px-4 py-2">No</th>
+              <th class="border px-4 py-2">Gambar</th>
+              <th class="border px-4 py-2">Kode Menu</th>
+              <th class="border px-4 py-2">Kategori</th>
+              <th class="border px-4 py-2">Nama Menu</th>
+              <th class="border px-4 py-2">Harga Pokok</th>
+              <th class="border px-4 py-2">Harga Jual</th>
+              <th class="border px-4 py-2">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2 text-center">1</td>
+              <td class="border px-4 py-2 text-center">
+                <img
+                  src="/assets/filter-oli.png"
+                  alt="Filter Oli"
+                  class="h-auto w-auto object-cover mx-auto"
+                />
+              </td>
+              <td class="border px-4 py-2">P000116</td>
+              <td class="border px-4 py-2">Filter Oli</td>
+              <td class="border px-4 py-2">Filter Oli</td>
+              <td class="border px-4 py-2">Rp93,000</td>
+              <td class="border px-4 py-2">Rp95,000</td>
+              <td class="border px-4 py-2 text-center">
+                <button
+                  class="bg-gray-500 text-white px-2 py-1 rounded hover:bg-gray-600"
+                >
+                  <i class="fas fa-cog"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2 text-center">2</td>
+              <td class="border px-4 py-2 text-center">
+                <img
+                  src="/assets/oli.png"
+                  alt="Oli Mesin"
+                  class="h-auto w-auto object-cover mx-auto"
+                />
+              </td>
+              <td class="border px-4 py-2">P000115</td>
+              <td class="border px-4 py-2">Oli</td>
+              <td class="border px-4 py-2">Oli Mesin Prima</td>
+              <td class="border px-4 py-2">Rp100,000</td>
+              <td class="border px-4 py-2">Rp110,000</td>
+              <td class="border px-4 py-2 text-center">
+                <button
+                  class="bg-gray-500 text-white px-2 py-1 rounded hover:bg-gray-600"
+                >
+                  <i class="fas fa-cog"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-500 text-white text-center py-4">
+      Copyright © 2024 PITCAR
+    </footer>
+  </body>
+</html>
