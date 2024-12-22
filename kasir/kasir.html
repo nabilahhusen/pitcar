@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pitcar Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center space-x-4">
+          <img src="/assets/logo.png" alt="Pitcar Logo" class="h-8" />
+        </div>
+        <ul class="flex space-x-6">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="/kasir/history.html"
+                class="text-gray-700 hover:text-red-500"
+                >Riwayat Transaksi</a
+              >
+            </li>
+            <li>
+              <a
+                href="/kasir/kasir.html"
+                class="text-gray-700 hover:text-red-500"
+                >Kasir</a
+              >
+            </li>
+          </ul>
+        </ul>
+        <div>
+          <a
+            href="/login.html"
+            class="text-gray-700 hover:text-red-500 flex items-center space-x-2"
+          >
+            <i class="fas fa-user-circle"></i>
+            <span>Kasir</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-6 flex space-x-6">
+      <!-- Left Section: Data Menu -->
+      <section class="w-2/3">
+        <div class="bg-white rounded shadow p-4">
+          <div class="flex justify-between mb-4">
+            <button class="bg-red-600 text-white py-2 px-4 rounded">
+              Semua Kategori
+            </button>
+            <input
+              type="text"
+              placeholder="Cari Menu"
+              class="border rounded py-2 px-4 w-1/2"
+            />
+          </div>
+
+          <!-- Product Grid -->
+          <div class="grid grid-cols-3 gap-4">
+            <!-- Product Card -->
+            <div class="border rounded shadow p-4 text-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Produk"
+                class="w-full h-32 object-cover mb-2"
+              />
+              <h3 class="text-lg font-semibold">Busi Avanza</h3>
+              <p class="text-red-600">Rp50.000</p>
+              <p class="text-sm">Stok: 0 / Limit: 1</p>
+            </div>
+
+            <div class="border rounded shadow p-4 text-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Produk"
+                class="w-full h-32 object-cover mb-2"
+              />
+              <h3 class="text-lg font-semibold">Filter Udara</h3>
+              <p class="text-red-600">Rp80.000</p>
+              <p class="text-sm">Stok: 0 / Limit: 1</p>
+            </div>
+
+            <div class="border rounded shadow p-4 text-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Produk"
+                class="w-full h-32 object-cover mb-2"
+              />
+              <h3 class="text-lg font-semibold">Oli Mesin Prima</h3>
+              <p class="text-red-600">Rp100.000</p>
+              <p class="text-sm">Stok: 0 / Limit: 1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Section: Keranjang -->
+      <section class="w-1/3">
+        <div class="bg-white rounded shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Keranjang</h2>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <label for="noBon" class="text-sm">NO BON</label>
+              <input
+                id="noBon"
+                type="text"
+                class="border rounded py-1 px-2 w-2/3"
+                value="1"
+              />
+            </div>
+            <div class="flex justify-between items-center">
+              <label for="customer" class="text-sm">CUSTOMER</label>
+              <input
+                id="customer"
+                type="text"
+                class="border rounded py-1 px-2 w-2/3"
+                placeholder="Nama Customer"
+              />
+            </div>
+
+            <div class="text-sm text-red-600">
+              * Untuk Customer yang sudah terdaftar pada sistem
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label for="atasNama" class="text-sm">ATAS NAMA</label>
+              <input
+                id="atasNama"
+                type="text"
+                class="border rounded py-1 px-2 w-2/3"
+                value="Guest"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="jasa-service" class="block text-sm font-bold mb-2"
+                >Total Jasa Service</label
+              >
+              <select
+                id="jasa-service"
+                class="w-full border rounded py-2 px-3 text-gray-700"
+              >
+                <option value="">Pilih Jasa Service</option>
+                <option value="service-ringan">
+                  Jasa Service Ringan - Rp90.000
+                </option>
+                <option value="service-sedang">
+                  Jasa Service Sedang - Rp100.000
+                </option>
+                <option value="service-berat">
+                  Jasa Service Berat - Rp150.000
+                </option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="list-sparepart" class="block text-sm font-bold mb-2"
+                >List Keranjang Spare Part</label
+              >
+              <div class="border rounded-md overflow-x-auto">
+                <table class="table-auto w-full text-left text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="px-4 py-2">Nama Spare Part</th>
+                      <th class="px-4 py-2">Harga</th>
+                      <th class="px-4 py-2">Jumlah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="px-4 py-2">Busi</td>
+                      <td class="px-4 py-2">Rp50.000</td>
+                      <td class="px-4 py-2">1</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2">Filter Udara</td>
+                      <td class="px-4 py-2">Rp80.000</td>
+                      <td class="px-4 py-2">1</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2">Oli Mesin</td>
+                      <td class="px-4 py-2">Rp120.000</td>
+                      <td class="px-4 py-2">1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold">Total Pembayaran</h3>
+            <div class="flex justify-between items-center">
+              <label for="status" class="text-sm">Status</label>
+              <select id="status" class="border rounded py-1 px-2 w-2/3">
+                <option>Status Pembayaran</option>
+                <option>Lunas</option>
+                <option>Belum Lunas</option>
+              </select>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label for="diskon" class="text-sm">Diskon</label>
+              <input
+                id="diskon"
+                type="number"
+                class="border rounded py-1 px-2 w-2/3"
+                placeholder="%"
+              />
+            </div>
+
+            <div class="flex justify-between items-center font-bold text-lg">
+              <span>Grand Total</span>
+              <span>Rp0</span>
+            </div>
+
+            <button
+              class="bg-red-600 text-white w-full py-2 rounded font-bold hover:bg-red-700"
+            >
+              Simpan Transaksi
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-500 text-white text-center py-4">
+      Copyright © 2024 PITCAR
+    </footer>
+  </body>
+</html>

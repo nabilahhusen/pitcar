@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Transaksi - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center space-x-4">
+          <img src="/assets/logo.png" alt="Pitcar Logo" class="h-8" />
+        </div>
+        <ul class="flex space-x-6">
+          <li>
+            <a
+              href="/kasir/history.html"
+              class="text-gray-700 hover:text-red-500"
+              >Riwayat Transaksi</a
+            >
+          </li>
+          <li>
+            <a href="/kasir/kasir.html" class="text-gray-700 hover:text-red-500"
+              >Kasir</a
+            >
+          </li>
+        </ul>
+        <a
+          href="/login.html"
+          class="text-gray-700 hover:text-red-500 flex items-center space-x-2"
+        >
+          <i class="fas fa-user-circle"></i>
+          <span>Kasir</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-6">
+      <h1 class="text-2xl font-semibold mb-4">Detail Transaksi</h1>
+      <div class="bg-white rounded shadow p-6">
+        <!-- Transaction Info -->
+        <div class="mb-6">
+          <h2 class="text-xl font-semibold">Transaksi ID: 1</h2>
+          <p class="text-gray-700">Tanggal: 2024-12-21</p>
+          <p class="text-gray-700">Jumlah: Rp500.000</p>
+          <p class="text-green-600">Status Pembayaran: Lunas</p>
+        </div>
+
+        <!-- Customer Info -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold">Informasi Customer</h3>
+          <p class="text-gray-700">Nama: John Doe</p>
+          <p class="text-gray-700">Email: johndoe@example.com</p>
+          <p class="text-gray-700">No. Telepon: +62 812-3456-7890</p>
+        </div>
+
+        <!-- Product Info -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold">Detail Produk</h3>
+          <ul class="list-disc pl-6">
+            <li>Produk: Mobil Sedan</li>
+            <li>Kuantitas: 1</li>
+            <li>Harga per unit: Rp500.000</li>
+          </ul>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold">Metode Pembayaran</h3>
+          <p class="text-gray-700">Metode: Transfer Bank</p>
+          <p class="text-gray-700">Bank: BCA</p>
+          <p class="text-gray-700">No. Rekening: 123-456-7890</p>
+          <p class="text-gray-700">Tanggal Pembayaran: 2024-12-21</p>
+        </div>
+
+        <!-- Billing Address -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold">Alamat Penagihan</h3>
+          <p class="text-gray-700">Alamat: Jl. Raya No. 123, Jakarta</p>
+          <p class="text-gray-700">Kota: Jakarta</p>
+          <p class="text-gray-700">Kode Pos: 12345</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex space-x-4">
+          <a
+            href="history.html"
+            class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
+            >Kembali ke Riwayat Transaksi</a
+          >
+          <button
+            class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400"
+          >
+            Batalkan Transaksi
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-500 text-white text-center py-4">
+      Copyright © 2024 PITCAR
+    </footer>
+  </body>
+</html>

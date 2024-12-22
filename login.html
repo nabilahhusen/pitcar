@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pitcar</title>
-    <!-- Menyertakan Tailwind CSS dari CDN -->
+    <title>Login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -24,43 +23,47 @@
 
       <!-- Bagian Kanan: Form Login -->
       <div class="w-1/2 bg-white flex flex-col items-center justify-center p-8">
-        <!-- Logo di atas form login -->
         <div class="mb-6">
-          <img src="/assets/logo.png" alt="Logo" class="h-full w-full" />
+          <img src="/assets/logo.png" alt="Logo" class="h-20" />
         </div>
-        <form class="w-full max-w-sm">
+        <form id="loginForm" class="w-full max-w-sm">
           <div class="mb-4">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
               for="username"
+              class="block text-gray-700 text-sm font-bold mb-2"
             >
               Username
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
               type="text"
+              id="username"
+              name="username"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Masukkan Username"
+              required
             />
           </div>
           <div class="mb-6">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
               for="password"
+              class="block text-gray-700 text-sm font-bold mb-2"
             >
               Password
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
               type="password"
+              id="password"
+              name="password"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Masukkan Password"
+              required
             />
           </div>
           <div class="flex items-center justify-center">
             <button
-              class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"
               type="button"
+              class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"
+              onclick="handleLogin()"
             >
               Login
             </button>
@@ -68,5 +71,22 @@
         </form>
       </div>
     </main>
+
+    <script>
+      function handleLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "test1234") {
+          window.location.href = "super-admin/employe.html";
+        } else if (username === "gudang" && password === "test1234") {
+          window.location.href = "gudang/sparepart.html";
+        } else if (username === "kasir" && password === "test1234") {
+          window.location.href = "/kasir/kasir.html";
+        } else {
+          alert("Username atau password salah!");
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Spare Part</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center space-x-4">
+          <img src="/assets/logo.png" alt="Pitcar Logo" class="h-8" />
+        </div>
+        <ul class="flex space-x-6">
+          <li></li>
+            <a href="sparepart.html" class="text-gray-700 hover:text-red-500"
+              >Stok</a
+            >
+          </li>
+          <li>
+            <a
+              href="add-sparepart.html"
+              class="text-gray-700 hover:text-red-500"
+              >Tambah Barang</a
+            >
+          </li>
+          <li>
+            <a href="category.html" class="text-gray-700 hover:text-red-500"
+              >Kategori Barang</a
+            >
+          </li>
+        </ul>
+       <div>
+  <a href="/login.html" class="text-gray-700 hover:text-red-500 flex items-center space-x-2">
+    <i class="fas fa-user-circle"></i>
+    <span>Gudang</span>
+  </a>
+</div>
+    </nav>
+
+    <!-- Form Tambah Spare Part -->
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-md">
+      <h1 class="text-2xl font-bold mb-6 text-red-600">+ Tambah Spare Part</h1>
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="mb-4">
+          <label for="kode-menu" class="block text-gray-700 font-semibold"
+            >Kode Menu</label
+          >
+          <input
+            type="text"
+            id="kode-menu"
+            name="kode_menu"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan kode menu"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="kategori" class="block text-gray-700 font-semibold"
+            >Kategori</label
+          >
+          <select
+            id="kategori"
+            name="kategori"
+            class="w-full border border-gray-300 rounded-md p-2"
+          >
+            <option value="">- Pilih -</option>
+            <option value="mesin">Filter Oli</option>
+            <option value="kelistrikan">Filter Udara</option>
+            <option value="body">Oli Mesin</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="nama-barang" class="block text-gray-700 font-semibold"
+            >Nama Spare Part</label
+          >
+          <input
+            type="text"
+            id="nama-barang"
+            name="nama_barang"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan nama spare part"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="harga-pokok" class="block text-gray-700 font-semibold"
+            >Harga Pokok</label
+          >
+          <input
+            type="number"
+            id="harga-pokok"
+            name="harga_pokok"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan harga pokok"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="harga-jual" class="block text-gray-700 font-semibold"
+            >Harga Jual</label
+          >
+          <input
+            type="number"
+            id="harga-jual"
+            name="harga_jual"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan harga jual"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="keterangan" class="block text-gray-700 font-semibold"
+            >Keterangan</label
+          >
+          <textarea
+            id="keterangan"
+            name="keterangan"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan keterangan"
+          ></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="gambar" class="block text-gray-700 font-semibold"
+            >Gambar</label
+          >
+          <input
+            type="file"
+            id="gambar"
+            name="gambar"
+            class="block w-full text-gray-700 border border-gray-300 rounded-md p-2"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="stok-minim" class="block text-gray-700 font-semibold"
+            >Stok Minimal</label
+          >
+          <input
+            type="number"
+            id="stok-minim"
+            name="stok_minim"
+            class="w-full border border-gray-300 rounded-md p-2"
+            placeholder="Masukkan stok minimal"
+          />
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button
+            type="submit"
+            class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-600"
+          >
+            Simpan
+          </button>
+          <a
+            href="javascript:history.back();"
+            class="bg-red-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-red-600"
+          >
+            Kembali
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-red-500 text-white text-center py-4 mt-10">
+      Copyright © 2024 PITCAR
+    </footer>
+  </body>
+</html>

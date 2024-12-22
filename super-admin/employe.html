@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pitcar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
     <!-- Navbar -->
@@ -14,33 +18,58 @@
           <img src="/assets/logo.png" alt="Pitcar Logo" class="h-8" />
         </div>
         <ul class="flex space-x-6">
+          <!-- Gudang -->
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Dashboard</a>
+            <a
+              href="/gudang/sparepart.html"
+              class="text-gray-700 hover:text-red-500"
+              >Stok</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Data Master</a>
-          </li>
-          <li><a href="#" class="text-gray-700 hover:text-red-500">Stok</a></li>
-          <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Kasir</a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Order</a>
+            <a
+              href="/gudang/add-sparepart.html"
+              class="text-gray-700 hover:text-red-500"
+              >Tambah Barang</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Akuntansi</a>
+            <a
+              href="/gudang/category.html"
+              class="text-gray-700 hover:text-red-500"
+              >Kategori Barang</a
+            >
+          </li>
+          <!-- Kasir -->
+          <li>
+            <a
+              href="/kasir/history.html"
+              class="text-gray-700 hover:text-red-500"
+              >Riwayat Transaksi</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Laporan</a>
+            <a href="/kasir/kasir.html" class="text-gray-700 hover:text-red-500"
+              >Kasir</a
+            >
           </li>
+          <!-- Tambah Akun -->
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500"
-              >Tambah Karyawan</a
+            <a
+              href="/super-admin/employe.html"
+              class="text-gray-700 hover:text-red-500"
+              >Tambah Akun</a
             >
           </li>
         </ul>
         <div>
-          <button class="text-gray-700 hover:text-red-500">Super Admin</button>
+          <a
+            href="/login.html"
+            class="text-gray-700 hover:text-red-500 flex items-center space-x-2"
+          >
+            <i class="fas fa-user-circle"></i>
+            <span>Super Admin</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -133,7 +162,39 @@
           <tbody>
             <tr>
               <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">A</td>
+              <td class="border px-4 py-2">Super Admin</td>
+              <td class="border px-4 py-2 flex space-x-2">
+                <button
+                  class="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+                >
+                  Edit
+                </button>
+                <button
+                  class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">2</td>
+              <td class="border px-4 py-2">Staff Gudang</td>
+              <td class="border px-4 py-2 flex space-x-2">
+                <button
+                  class="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+                >
+                  Edit
+                </button>
+                <button
+                  class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">3</td>
+              <td class="border px-4 py-2">Staff Kasir</td>
               <td class="border px-4 py-2 flex space-x-2">
                 <button
                   class="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
